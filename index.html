@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Saswat Ranjan Nayak — Data Analyst & Web Developer</title>
+  <meta name="description"
+    content="Data Analyst & Web Developer skilled in SQL, Python, Power BI, React, and Three.js. Portfolio of Saswat Ranjan Nayak.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- 3D Theme CSS -->
+  <link rel="stylesheet" href="css/3d-theme.css">
+</head>
+
+<body>
+
+  <!-- CURSOR -->
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div style="position:relative;width:80px;height:80px;display:flex;align-items:center;justify-content:center;">
+      <div class="loader-ring"></div>
+      <div class="loader-ring-inner"></div>
+    </div>
+    <p class="loader-text">INITIALIZING</p>
+  </div>
+
+  <!-- 3D BACKGROUND CANVAS -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav id="navbar">
+    <a class="nav-brand" href="#hero">SRN</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-tag reveal">PORTFOLIO 2025</p>
+      <h1 class="hero-name reveal">
+        <span class="first">Saswat Ranjan</span><br>
+        <span class="last">Nayak</span>
+      </h1>
+      <p class="hero-role reveal">
+        I'm a&nbsp;<span class="typed-wrap"><span id="typed"></span></span>
+      </p>
+      <div class="hero-btns reveal">
+        <a href="#projects" class="btn-primary-3d">
+          <i class="fa-solid fa-rocket"></i> View Projects
+        </a>
+        <a href="https://github.com/Saswat132002" target="_blank" class="btn-outline-3d">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero 3D Web Designer Visual -->
+    <div class="hero-3d-wrapper" id="hero-img-wrap">
+      <div class="web3d-scene">
+
+        <!-- Orbit rings -->
+        <div class="web3d-orbit orbit-1"></div>
+        <div class="web3d-orbit orbit-2"></div>
+        <div class="web3d-orbit orbit-3"></div>
+
+        <!-- Floating tech icon dots on orbits -->
+        <div class="web3d-icon-dot icon-html" title="HTML5"><i class="fa-brands fa-html5"></i></div>
+        <div class="web3d-icon-dot icon-css" title="CSS3"><i class="fa-brands fa-css3-alt"></i></div>
+        <div class="web3d-icon-dot icon-js" title="JavaScript"><i class="fa-brands fa-js"></i></div>
+        <div class="web3d-icon-dot icon-react" title="React"><i class="fa-brands fa-react"></i></div>
+        <div class="web3d-icon-dot icon-python" title="Python"><i class="fa-brands fa-python"></i></div>
+
+        <!-- Central monitor -->
+        <div class="web3d-monitor">
+          <div class="web3d-screen">
+            <!-- Animated code lines -->
+            <div class="web3d-code">
+              <div class="code-line"><span class="c-tag">&lt;div</span> <span class="c-attr">class</span><span
+                  class="c-eq">=</span><span class="c-str">"portfolio"</span><span class="c-tag">&gt;</span></div>
+              <div class="code-line c-delay1"><span class="c-prop">&nbsp;&nbsp;design</span><span class="c-eq">:</span>
+                <span class="c-val">premium</span><span class="c-semi">;</span></div>
+              <div class="code-line c-delay2"><span class="c-prop">&nbsp;&nbsp;data</span><span class="c-eq">:</span>
+                <span class="c-val">analytics</span><span class="c-semi">;</span></div>
+              <div class="code-line c-delay3"><span class="c-prop">&nbsp;&nbsp;skills</span><span class="c-eq">:</span>
+                <span class="c-val">fullstack</span><span class="c-semi">;</span></div>
+              <div class="code-line c-delay2"><span class="c-tag">&lt;/div&gt;</span></div>
+            </div>
+            <!-- Blinking cursor -->
+            <div class="web3d-cursor"></div>
+          </div>
+          <div class="web3d-stand-neck"></div>
+          <div class="web3d-stand-base"></div>
+        </div>
+
+        <!-- Floating mini windows -->
+        <div class="web3d-float-card card-a">
+          <i class="fa-solid fa-chart-line" style="color:var(--cyan);"></i>
+          <span>Analytics</span>
+        </div>
+        <div class="web3d-float-card card-b">
+          <i class="fa-solid fa-globe" style="color:var(--purple);"></i>
+          <span>Live Sites</span>
+        </div>
+        <div class="web3d-float-card card-c">
+          <i class="fa-solid fa-database" style="color:#22c55e;"></i>
+          <span>SQL · Power BI</span>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-mouse"></div>
+      <span class="scroll-txt">SCROLL</span>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <!-- Image -->
+        <div class="about-img-container reveal-left" id="about-img-tilt">
+          <div class="about-img-wrap" data-tilt>
+            <img src="images/pic.png" alt="Saswat Ranjan Nayak">
+          </div>
+          <div class="about-badge">
+            <div class="num">10+</div>
+            <div class="lbl">Projects</div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="reveal-right">
+          <span class="section-tag">WHO I AM</span>
+          <h2 class="section-title">About <span>Me</span></h2>
+          <p class="section-desc" style="margin-bottom:24px;">
+            I'm an adaptable and detail-oriented Data Analyst skilled in SQL, Python, Excel, and Power BI, with a strong
+            foundation in data cleaning, visualization, and deriving actionable insights. A fast learner passionate
+            about Generative AI and storytelling through data. Currently pursuing MCA at KIIT University.
+          </p>
+          <ul class="about-info-list">
+            <li><strong>Name</strong>Saswat Ranjan Nayak</li>
+            <li><strong>Role</strong>Data Analyst</li>
+            <li><strong>Education</strong>MCA — KIIT University</li>
+            <li><strong>Location</strong>Sambalpur, Odisha, India</li>
+            <li><strong>BI Tools</strong>Power BI &amp; Tableau</li>
+            <li><strong>Languages</strong>English, Hindi, Odia</li>
+            <li><strong>Domain</strong>Retail, Ecommerce</li>
+            <li><strong>Interests</strong>Travel Photography, Teaching</li>
+          </ul>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;">
+            <a href="https://www.linkedin.com/in/saswat13/" target="_blank" class="btn-primary-3d"
+              style="padding:10px 22px;font-size:13px;">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://resume-builder-test-new.masaischool.com/resume/public?resumeId=66dad4d0f6d5a90baff94adb"
+              target="_blank" class="btn-outline-3d" style="padding:10px 22px;font-size:13px;">
+              <i class="fa-solid fa-download"></i> Download CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STATS ===================== -->
+  <section id="stats" style="padding:60px 0;">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="reveal">
+          <div class="stat-num" data-count="10">0</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="reveal">
+          <div class="stat-num" data-count="8">0</div>
+          <div class="stat-label">Achievements</div>
+        </div>
+        <div class="reveal">
+          <div class="stat-num" data-count="200">0</div>
+          <div class="stat-label">Cups of Coffee ☕</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section id="skills">
+    <div class="container">
+      <div class="reveal" style="text-align:center;margin-bottom:10px;">
+        <span class="section-tag" style="display:inline-block;">EXPERTISE</span>
+      </div>
+      <h2 class="section-title reveal" style="text-align:center;">Tech <span>Skills</span></h2>
+      <p class="section-desc reveal" style="text-align:center;margin:0 auto 0;">
+        Tools and technologies I work with to transform raw data into meaningful insights.
+      </p>
+
+      <div class="skills-grid">
+        <!-- Each skill-card gets data-level for bar fill -->
+        <div class="skill-card reveal" data-level="95">
+          <div class="skill-icon">🗄️</div>
+          <div class="skill-name">SQL</div>
+          <div class="skill-level">95%</div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-level="85">
+          <div class="skill-icon">🐍</div>
+          <div class="skill-name">Python</div>
+          <div class="skill-level">85%</div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-level="90">
+          <div class="skill-icon">📊</div>
+          <div class="skill-name">Power BI</div>
+          <div class="skill-level">90%</div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-level="88">
+          <div class="skill-icon">📈</div>
+          <div class="skill-name">Tableau</div>
+          <div class="skill-level">88%</div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-level="85">
+          <div class="skill-icon">📉</div>
+          <div class="skill-name">Data Viz</div>
+          <div class="skill-level">85%</div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-level="80">
+          <div class="skill-icon">🤖</div>
+          <div class="skill-name">Machine Learning</div>
+          <div class="skill-level">80%</div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-level="82">
+          <div class="skill-icon">📋</div>
+          <div class="skill-name">Excel</div>
+          <div class="skill-level">82%</div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-level="75">
+          <div class="skill-icon">⚡</div>
+          <div class="skill-name">PySpark</div>
+          <div class="skill-level">75%</div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-level="78">
+          <div class="skill-icon">📐</div>
+          <div class="skill-name">Statistics</div>
+          <div class="skill-level">78%</div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-level="72">
+          <div class="skill-icon">🔧</div>
+          <div class="skill-name">Git / JIRA</div>
+          <div class="skill-level">72%</div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-level="70">
+          <div class="skill-icon">🌐</div>
+          <div class="skill-name">Google Analytics</div>
+          <div class="skill-level">70%</div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-level="68">
+          <div class="skill-icon">🔍</div>
+          <div class="skill-name">SEO</div>
+          <div class="skill-level">68%</div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LIVE WEB PROJECTS ===================== -->
+  <section id="webprojects" style="background:linear-gradient(180deg,transparent,rgba(0,212,255,0.04),transparent);">
+    <div class="container">
+      <div class="reveal" style="text-align:center;">
+        <span class="section-tag" style="display:inline-block;">WEB DEVELOPMENT</span>
+      </div>
+      <h2 class="section-title reveal" style="text-align:center;">Live <span>Websites</span></h2>
+      <p class="section-desc reveal" style="text-align:center;margin:0 auto 24px;">
+        Hover to flip — real websites I built and deployed, all live right now.
+      </p>
+
+      <div class="projects-grid web-flip-grid">
+
+        <!-- 01 SKBPL -->
+        <div class="project-flip-container reveal">
+          <div class="project-flip-inner">
+            <!-- FRONT: screenshot -->
+            <div class="project-face project-front web-front"
+              style="background-image:url('images/site_skbpl.png');background-size:cover;background-position:top center;">
+              <div class="web-front-overlay">
+                <div class="live-badge" style="position:relative;z-index:2;"><span class="live-dot"></span>LIVE</div>
+                <span class="web-front-num">01</span>
+              </div>
+              <p class="project-hint" style="position:absolute;bottom:14px;width:100%;text-align:center;z-index:3;">
+                <i class="fa-solid fa-rotate-right"></i> Hover to flip
+              </p>
+            </div>
+            <!-- BACK: details -->
+            <div class="project-face project-back web-back">
+              <div>
+                <div class="project-tags" style="margin-bottom:10px;">
+                  <span class="project-tag">Business</span>
+                  <span class="project-tag">Corporate</span>
+                  <span class="project-tag">Enterprise</span>
+                </div>
+                <h3 class="project-back-title">SKBPL</h3>
+                <p class="web-back-domain"><i class="fa-solid fa-globe"></i> skbpl.com</p>
+                <p class="project-back-desc">Enterprise-grade business solutions platform with cutting-edge design and
+                  seamless user experience for operational excellence.</p>
+                <p class="web-scholastika"><i class="fa-solid fa-building"></i> Scholastika Pvt Ltd</p>
+              </div>
+              <a href="https://skbpl.com/" target="_blank" class="project-back-link web-visit-btn">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Live Site
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 Tutor Consortium -->
+        <div class="project-flip-container reveal">
+          <div class="project-flip-inner">
+            <div class="project-face project-front web-front"
+              style="background-image:url('images/site_tutorconsortium.png');background-size:cover;background-position:top center;">
+              <div class="web-front-overlay">
+                <div class="live-badge" style="position:relative;z-index:2;"><span class="live-dot"></span>LIVE</div>
+                <span class="web-front-num">02</span>
+              </div>
+              <p class="project-hint" style="position:absolute;bottom:14px;width:100%;text-align:center;z-index:3;">
+                <i class="fa-solid fa-rotate-right"></i> Hover to flip
+              </p>
+            </div>
+            <div class="project-face project-back web-back">
+              <div>
+                <div class="project-tags" style="margin-bottom:10px;">
+                  <span class="project-tag">Education</span>
+                  <span class="project-tag">Platform</span>
+                  <span class="project-tag">SaaS</span>
+                </div>
+                <h3 class="project-back-title">Tutor Consortium</h3>
+                <p class="web-back-domain"><i class="fa-solid fa-globe"></i> tutorconsortium.com</p>
+                <p class="project-back-desc">Revolutionary EdTech platform connecting learners with world-class
+                  educators globally.</p>
+                <p class="web-scholastika"><i class="fa-solid fa-building"></i> Scholastika Pvt Ltd</p>
+              </div>
+              <a href="https://tutorconsortium.com/" target="_blank" class="project-back-link web-visit-btn">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Live Site
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 Astro Raghupati Sahu -->
+        <div class="project-flip-container reveal">
+          <div class="project-flip-inner">
+            <div class="project-face project-front web-front"
+              style="background-image:url('images/site_astro.png');background-size:cover;background-position:top center;">
+              <div class="web-front-overlay">
+                <div class="live-badge" style="position:relative;z-index:2;"><span class="live-dot"></span>LIVE</div>
+                <span class="web-front-num">03</span>
+              </div>
+              <p class="project-hint" style="position:absolute;bottom:14px;width:100%;text-align:center;z-index:3;">
+                <i class="fa-solid fa-rotate-right"></i> Hover to flip
+              </p>
+            </div>
+            <div class="project-face project-back web-back">
+              <div>
+                <div class="project-tags" style="margin-bottom:10px;">
+                  <span class="project-tag">Astrology</span>
+                  <span class="project-tag">Services</span>
+                  <span class="project-tag">Booking</span>
+                </div>
+                <h3 class="project-back-title">Astro Raghupati Sahu</h3>
+                <p class="web-back-domain"><i class="fa-solid fa-globe"></i> astroraghupatisahu.in</p>
+                <p class="project-back-desc">Mystical astrology platform with immersive consultations and personalized
+                  cosmic readings for spiritual guidance.</p>
+              </div>
+              <a href="https://astroraghupatisahu.in/" target="_blank" class="project-back-link web-visit-btn">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Live Site
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04 Shadovein -->
+        <div class="project-flip-container reveal">
+          <div class="project-flip-inner">
+            <div class="project-face project-front web-front"
+              style="background-image:url('images/site_shadovein.png');background-size:cover;background-position:top center;">
+              <div class="web-front-overlay">
+                <div class="live-badge" style="position:relative;z-index:2;"><span class="live-dot"></span>LIVE</div>
+                <span class="web-front-num">04</span>
+              </div>
+              <p class="project-hint" style="position:absolute;bottom:14px;width:100%;text-align:center;z-index:3;">
+                <i class="fa-solid fa-rotate-right"></i> Hover to flip
+              </p>
+            </div>
+            <div class="project-face project-back web-back">
+              <div>
+                <div class="project-tags" style="margin-bottom:10px;">
+                  <span class="project-tag">Corporate</span>
+                  <span class="project-tag">3D Design</span>
+                  <span class="project-tag">Futuristic</span>
+                </div>
+                <h3 class="project-back-title">Shadovein</h3>
+                <p class="web-back-domain"><i class="fa-solid fa-globe"></i> shadovein.com</p>
+                <p class="project-back-desc">Premium corporate website with a futuristic, elegant, tech-inspired design
+                  featuring glassmorphism, gradients, and immersive visuals.</p>
+                <p class="web-scholastika"><i class="fa-solid fa-building"></i> Scholastika Pvt Ltd</p>
+              </div>
+              <a href="https://shadovein.com/" target="_blank" class="project-back-link web-visit-btn">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Live Site
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 05 Solvaphileites -->
+        <div class="project-flip-container reveal">
+          <div class="project-flip-inner">
+            <div class="project-face project-front web-front"
+              style="background-image:url('images/site_solvaphileites.png');background-size:cover;background-position:top center;">
+              <div class="web-front-overlay">
+                <div class="live-badge" style="position:relative;z-index:2;"><span class="live-dot"></span>LIVE</div>
+                <span class="web-front-num">05</span>
+              </div>
+              <p class="project-hint" style="position:absolute;bottom:14px;width:100%;text-align:center;z-index:3;">
+                <i class="fa-solid fa-rotate-right"></i> Hover to flip
+              </p>
+            </div>
+            <div class="project-face project-back web-back">
+              <div>
+                <div class="project-tags" style="margin-bottom:10px;">
+                  <span class="project-tag">Solutions</span>
+                  <span class="project-tag">Modern</span>
+                  <span class="project-tag">Digital</span>
+                </div>
+                <h3 class="project-back-title">Solvaphileites</h3>
+                <p class="web-back-domain"><i class="fa-solid fa-globe"></i> solvaphileites.com</p>
+                <p class="project-back-desc">A dynamic, modern website delivering smart solutions and innovative digital
+                  experiences with a clean, professional design.</p>
+                <p class="web-scholastika"><i class="fa-solid fa-building"></i> Scholastika Pvt Ltd</p>
+              </div>
+              <a href="https://solvaphileites.com/" target="_blank" class="project-back-link web-visit-btn">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Live Site
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ===================== DATA PROJECTS ===================== -->
+  <section id="projects" style="background:linear-gradient(180deg,transparent,rgba(124,58,237,0.04),transparent);">
+    <div class="container">
+      <div class="reveal" style="text-align:center;">
+        <span class="section-tag" style="display:inline-block;">DATA ANALYTICS</span>
+      </div>
+      <h2 class="section-title reveal" style="text-align:center;">Data <span>Projects</span></h2>
+      <p class="section-desc reveal" style="text-align:center;margin:0 auto 0;">
+        Hover to flip each card. Projects built with SQL, Python &amp; Power BI to solve real business problems.
+      </p>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-flip-container reveal">
+          <div class="project-flip-inner">
+            <div class="project-face project-front">
+              <div class="project-front-img" style="background:linear-gradient(135deg,#0a0a1a,#1a0a2e);">🍕</div>
+              <div class="project-front-body">
+                <div class="project-tags">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">Power BI</span>
+                  <span class="project-tag">SQL</span>
+                </div>
+                <h3 class="project-title">Food Delivery Analysis</h3>
+                <p class="project-hint"><i class="fa-solid fa-rotate-right"></i> Hover to flip</p>
+              </div>
+            </div>
+            <div class="project-face project-back">
+              <div>
+                <div class="project-tags" style="margin-bottom:14px;">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">Power BI</span>
+                </div>
+                <h3 class="project-back-title">Food Delivery Analysis</h3>
+                <p class="project-back-desc">
+                  Zomato Bangalore outlet analysis — web scraping, data cleaning, and interactive Power BI dashboard.
+                  Uncovered key insights on restaurant performance, pricing, and customer ratings across 50,000+
+                  records.
+                </p>
+              </div>
+              <a href="https://github.com/10kunalJain/Food-Delivery-Analysis" target="_blank" class="project-back-link">
+                <i class="fa-brands fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-flip-container reveal">
+          <div class="project-flip-inner">
+            <div class="project-face project-front">
+              <div class="project-front-img" style="background:linear-gradient(135deg,#0a1a0a,#0a2e1a);">🏏</div>
+              <div class="project-front-body">
+                <div class="project-tags">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">Data Analysis</span>
+                  <span class="project-tag">SQL</span>
+                </div>
+                <h3 class="project-title">Dream Cricket League</h3>
+                <p class="project-hint"><i class="fa-solid fa-rotate-right"></i> Hover to flip</p>
+              </div>
+            </div>
+            <div class="project-face project-back">
+              <div>
+                <div class="project-tags" style="margin-bottom:14px;">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">IPL Data</span>
+                </div>
+                <h3 class="project-back-title">Dream Cricket League</h3>
+                <p class="project-back-desc">
+                  Data-driven team selection for Dream-11's Dream Cricket League using IPL seasons 1-9 data. Formed 5
+                  balanced teams (5 batsmen, 5 bowlers, 1 wicketkeeper) based on statistical performance analysis.
+                </p>
+              </div>
+              <a href="https://github.com/GayatriTumsare/App_Archers_011" target="_blank" class="project-back-link">
+                <i class="fa-brands fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /projects-grid -->
+
+      <!-- GitHub Banner -->
+      <div class="github-banner reveal">
+        <h2>More Projects on <span
+            style="background:var(--gradient-main);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">GitHub</span>
+        </h2>
+        <p>I love solving business problems &amp; uncovering hidden data stories</p>
+        <a href="https://github.com/Saswat132002" target="_blank" class="btn-primary-3d">
+          <i class="fa-brands fa-github"></i> Visit GitHub
+        </a>
+      </div>
+
+    </div><!-- /container -->
+  </section>
+
+  <!-- ===================== RESUME ===================== -->
+  <section id="resume">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;" id="resume-grid">
+        <!-- Education -->
+        <div>
+          <span class="section-tag reveal">ACADEMICS</span>
+          <h2 class="section-title reveal" style="font-size:2rem;">Education</h2>
+          <div class="timeline reveal">
+            <div class="timeline-item">
+              <div class="timeline-date">2023 — 2025</div>
+              <h3 class="timeline-title">Master of Computer Applications</h3>
+              <div class="timeline-sub">Kalinga Institute of Industrial Technology (KIIT)</div>
+              <p class="timeline-desc">Specializing in Data Science &amp; Analytics. Advanced coursework in Machine
+                Learning, Database Systems, and Statistical Methods.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2020 — 2023</div>
+              <h3 class="timeline-title">Bachelor of Science</h3>
+              <div class="timeline-sub">Government Autonomous College, Sambalpur</div>
+              <p class="timeline-desc">First Class. Strong foundation in Mathematics and Computer Science fundamentals.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2023 — 2024</div>
+              <h3 class="timeline-title">Data Analytics Program</h3>
+              <div class="timeline-sub">Masai School</div>
+              <p class="timeline-desc">Industry-focused training in SQL, Python, Power BI, Tableau, Statistics, and
+                Machine Learning. Built 10+ real-world projects.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience / Certifications -->
+        <div>
+          <span class="section-tag reveal">EXPERIENCE</span>
+          <h2 class="section-title reveal" style="font-size:2rem;">Work <span>Experience</span></h2>
+          <div class="timeline reveal">
+            <!-- CURRENT JOB -->
+            <div class="timeline-item"
+              style="border-color:rgba(0,212,255,0.4);box-shadow:0 0 20px rgba(0,212,255,0.08);">
+              <div class="timeline-date" style="display:flex;align-items:center;gap:10px;">
+                2025 — Present
+                <span
+                  style="font-size:9px;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.4);color:#22c55e;padding:2px 8px;border-radius:20px;letter-spacing:1.5px;font-family:'Orbitron',monospace;">●
+                  CURRENT</span>
+              </div>
+              <h3 class="timeline-title">Data Analyst &amp; Web Developer</h3>
+              <div class="timeline-sub">Scholastika Pvt Ltd</div>
+              <p class="timeline-desc">
+                Working as a full-stack contributor — building, deploying, and managing live websites (skbpl.com,
+                tutorconsortium.com, shadovein.com, solvaphileites.com) while handling all data operations, backend
+                systems, and analytics for the company.
+              </p>
+              <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:12px;">
+                <span
+                  style="font-size:10px;padding:3px 10px;border:1px solid rgba(0,212,255,0.3);border-radius:20px;color:var(--cyan);font-family:'Orbitron',monospace;">Web
+                  Dev</span>
+                <span
+                  style="font-size:10px;padding:3px 10px;border:1px solid rgba(0,212,255,0.3);border-radius:20px;color:var(--cyan);font-family:'Orbitron',monospace;">Data
+                  Analytics</span>
+                <span
+                  style="font-size:10px;padding:3px 10px;border:1px solid rgba(0,212,255,0.3);border-radius:20px;color:var(--cyan);font-family:'Orbitron',monospace;">Backend</span>
+                <span
+                  style="font-size:10px;padding:3px 10px;border:1px solid rgba(0,212,255,0.3);border-radius:20px;color:var(--cyan);font-family:'Orbitron',monospace;">SQL</span>
+                <span
+                  style="font-size:10px;padding:3px 10px;border:1px solid rgba(0,212,255,0.3);border-radius:20px;color:var(--cyan);font-family:'Orbitron',monospace;">Power
+                  BI</span>
+              </div>
+            </div>
+            <!-- INTERNSHIP -->
+            <div class="timeline-item">
+              <div class="timeline-date">3 Months</div>
+              <h3 class="timeline-title">Data Analyst Intern</h3>
+              <div class="timeline-sub">Internship Experience</div>
+              <p class="timeline-desc">
+                Hands-on experience with real business datasets. Performed data cleaning, built dashboards, and
+                presented insights to stakeholders. Worked with SQL databases and Python for reporting automation.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">KEY TOOLS</div>
+              <h3 class="timeline-title">Technical Proficiencies</h3>
+              <div class="timeline-sub">Data Stack</div>
+              <p class="timeline-desc">
+                SQL • Python (Pandas, NumPy, Matplotlib, Seaborn) • Power BI • Tableau • Excel • PySpark • Git • Google
+                Analytics • JIRA
+              </p>
+            </div>
+          </div>
+
+          <div class="reveal" style="margin-top:32px;">
+            <a href="https://drive.google.com/file/d/17VTLO5Su6yX-RNXQjQRVlIbpJcwczGS7/view?usp=sharing" target="_blank"
+              class="btn-primary-3d">
+              <i class="fa-solid fa-file-arrow-down"></i> Download Full CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact">
+    <div class="container">
+      <div class="reveal" style="text-align:center;">
+        <span class="section-tag" style="display:inline-block;">GET IN TOUCH</span>
+      </div>
+      <h2 class="section-title reveal" style="text-align:center;">Contact <span>Me</span></h2>
+      <p class="section-desc reveal" style="text-align:center;margin:0 auto;">
+        Have a project in mind or want to collaborate? Reach out through any of the channels below.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <div class="contact-icon">📍</div>
+          <div class="contact-label">LOCATION</div>
+          <div class="contact-value">Sambalpur, Odisha, India</div>
+        </div>
+        <div class="contact-card reveal">
+          <div class="contact-icon">📱</div>
+          <div class="contact-label">PHONE</div>
+          <div class="contact-value"><a href="tel:+918260526268">+91 8260526268</a></div>
+        </div>
+        <div class="contact-card reveal">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-label">EMAIL</div>
+          <div class="contact-value"><a href="mailto:nayaksaswatranjan202@gmail.com">nayaksaswatranjan202@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-card reveal">
+          <div class="contact-icon">📄</div>
+          <div class="contact-label">RESUME</div>
+          <div class="contact-value">
+            <a href="https://resume-builder-test-new.masaischool.com/resume/public?resumeId=66dad4d0f6d5a90baff94adb"
+              target="_blank">View / Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="socials reveal">
+        <a href="https://www.linkedin.com/in/saswat13/" target="_blank" class="social-btn" title="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/Saswat132002" target="_blank" class="social-btn" title="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://x.com/Saswat20250157" target="_blank" class="social-btn" title="Twitter / X">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://www.facebook.com/saswat.nayak.507/" target="_blank" class="social-btn" title="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/saswat.nayak.507/" target="_blank" class="social-btn" title="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <p>Designed &amp; Built with <span>♥</span> by <span>Saswat Ranjan Nayak</span> &middot; 2025</p>
+  </footer>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <!-- Three.js -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <!-- Vanilla Tilt -->
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+
+  <script>
+    /* ============================================================
+       MAIN SCRIPT
+       ============================================================ */
+
+    // ---- LOADER ----
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('loader').classList.add('hide');
+      }, 1200);
+    });
+
+    // ---- CUSTOM CURSOR ----
+    const cursor = document.getElementById('cursor');
+    const trail = document.getElementById('cursor-trail');
+    let mx = 0, my = 0, tx = 0, ty = 0;
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      cursor.style.left = mx + 'px';
+      cursor.style.top = my + 'px';
+    });
+    function animateTrail() {
+      tx += (mx - tx) * 0.12;
+      ty += (my - ty) * 0.12;
+      trail.style.left = tx + 'px';
+      trail.style.top = ty + 'px';
+      requestAnimationFrame(animateTrail);
+    }
+    animateTrail();
+
+    // ---- NAVBAR ----
+    const navbar = document.getElementById('navbar');
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    // ---- TYPED.JS ----
+    new Typed('#typed', {
+      strings: ['Data Analyst', 'Web Developer', 'Problem Solver', 'Full Stack Creator', 'Tech Enthusiast'],
+      typeSpeed: 60,
+      backSpeed: 35,
+      backDelay: 1800,
+      loop: true
+    });
+
+    // ---- THREE.JS BACKGROUND — subtle circular star field ----
+    (function initThree() {
+      const canvas = document.getElementById('bg-canvas');
+      const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, alpha: true });
+      renderer.setPixelRatio(1); // keep it cheap
+      renderer.setSize(window.innerWidth, window.innerHeight);
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 300);
+      camera.position.z = 6;
+
+      // ---- Build a soft circular sprite texture ----
+      function makeCircleTexture(size, color) {
+        const c = document.createElement('canvas');
+        c.width = c.height = size;
+        const ctx = c.getContext('2d');
+        const r = size / 2;
+        const gradient = ctx.createRadialGradient(r, r, 0, r, r, r);
+        gradient.addColorStop(0, color.replace(')', ',1)').replace('rgb', 'rgba'));
+        gradient.addColorStop(0.4, color.replace(')', ',0.6)').replace('rgb', 'rgba'));
+        gradient.addColorStop(1, color.replace(')', ',0)').replace('rgb', 'rgba'));
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.arc(r, r, r, 0, Math.PI * 2);
+        ctx.fill();
+        return new THREE.CanvasTexture(c);
+      }
+      const texWhite = makeCircleTexture(32, 'rgb(200,210,255)');
+      const texCyan = makeCircleTexture(32, 'rgb(0,212,255)');
+      const texPurple = makeCircleTexture(32, 'rgb(140,80,255)');
+
+      // ---- Star particles — small, sparse, round ----
+      function makeStars(count, tex, size, opacity) {
+        const geo = new THREE.BufferGeometry();
+        const pos = new Float32Array(count * 3);
+        for (let i = 0; i < count; i++) {
+          pos[i * 3] = (Math.random() - 0.5) * 40;
+          pos[i * 3 + 1] = (Math.random() - 0.5) * 25;
+          pos[i * 3 + 2] = (Math.random() - 0.5) * 20 - 5;
+        }
+        geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+        const mat = new THREE.PointsMaterial({
+          size, map: tex,
+          transparent: true, opacity,
+          alphaTest: 0.01,
+          depthWrite: false,
+          sizeAttenuation: true,
+        });
+        return new THREE.Points(geo, mat);
+      }
+
+      const starsWhite = makeStars(700, texWhite, 0.08, 0.55);
+      const starsCyan = makeStars(180, texCyan, 0.12, 0.45);
+      const starsPurple = makeStars(120, texPurple, 0.10, 0.35);
+      scene.add(starsWhite, starsCyan, starsPurple);
+
+      // ---- Single elegant wireframe torus (far back) ----
+      const torusMesh = new THREE.Mesh(
+        new THREE.TorusGeometry(2.5, 0.5, 12, 60),
+        new THREE.MeshBasicMaterial({ color: 0x00d4ff, wireframe: true, transparent: true, opacity: 0.055 })
+      );
+      torusMesh.position.set(5, -1.5, -8);
+      scene.add(torusMesh);
+
+      // ---- Mouse parallax ----
+      let mx = 0, my = 0;
+      document.addEventListener('mousemove', e => {
+        mx = (e.clientX / window.innerWidth - 0.5) * 0.3;
+        my = (e.clientY / window.innerHeight - 0.5) * 0.3;
+      });
+
+      window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+
+      const clock = new THREE.Clock();
+      function animate() {
+        requestAnimationFrame(animate);
+        const t = clock.getElapsedTime();
+        // Very gentle drift
+        starsWhite.rotation.y = t * 0.012 + mx;
+        starsWhite.rotation.x = t * 0.006 + my;
+        starsCyan.rotation.y = t * 0.016 + mx;
+        starsPurple.rotation.y = t * 0.010 + mx;
+        torusMesh.rotation.x = t * 0.18;
+        torusMesh.rotation.y = t * 0.12;
+        renderer.render(scene, camera);
+      }
+      animate();
+    })();
+
+    // ---- VANILLA TILT (about image) ----
+    VanillaTilt.init(document.querySelectorAll('[data-tilt]'), {
+      max: 12,
+      speed: 400,
+      glare: true,
+      'max-glare': 0.15,
+    });
+
+    // ---- INTERSECTION OBSERVER — REVEAL ----
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          // Stagger within a batch
+          const delay = (entry.target.dataset.delay || 0);
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, delay);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    // Add stagger delays to skill cards, project cards, etc.
+    document.querySelectorAll('.skill-card').forEach((el, i) => {
+      el.dataset.delay = (i % 4) * 80;
+    });
+    document.querySelectorAll('.project-flip-container').forEach((el, i) => {
+      el.dataset.delay = i * 120;
+    });
+    document.querySelectorAll('.contact-card').forEach((el, i) => {
+      el.dataset.delay = i * 100;
+    });
+
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // ---- SKILL BAR ANIMATION ----
+    const skillObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const bar = entry.target.querySelector('.skill-bar-fill');
+          const level = entry.target.dataset.level;
+          if (bar && level) {
+            setTimeout(() => { bar.style.width = level + '%'; }, 300);
+          }
+          skillObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.skill-card').forEach(el => skillObserver.observe(el));
+
+    // ---- COUNTER ANIMATION ----
+    function animateCount(el, target, duration = 2000) {
+      let start = 0;
+      const step = (timestamp) => {
+        if (!start) start = timestamp;
+        const progress = Math.min((timestamp - start) / duration, 1);
+        el.textContent = Math.floor(progress * target);
+        if (progress < 1) requestAnimationFrame(step);
+        else el.textContent = target;
+      };
+      requestAnimationFrame(step);
+    }
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const target = +entry.target.dataset.count;
+          animateCount(entry.target, target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+
+    // ---- RESPONSIVE RESUME GRID ----
+    function fixResumeGrid() {
+      const grid = document.getElementById('resume-grid');
+      if (grid) {
+        grid.style.gridTemplateColumns = window.innerWidth < 768 ? '1fr' : '1fr 1fr';
+      }
+    }
+    fixResumeGrid();
+    window.addEventListener('resize', fixResumeGrid);
+
+    // ---- SMOOTH ACTIVE NAV ----
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
+      });
+      document.querySelectorAll('.nav-links a').forEach(a => {
+        a.style.color = '';
+        if (a.getAttribute('href') === '#' + current) a.style.color = 'var(--cyan)';
+      });
+    });
+  </script>
+
+</body>
+
+</html>
