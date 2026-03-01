@@ -1023,6 +1023,47 @@
     });
   </script>
 
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Light/Dark Mode">
+    <!-- Moon icon = dark mode indicator -->
+    <i class="fa-solid fa-moon"></i>
+    <!-- Sun icon = light mode indicator -->
+    <i class="fa-solid fa-sun"></i>
+  </button>
+
+  <script>
+    // ===== LIGHT/DARK MODE LOGIC =====
+    const themeBtn = document.getElementById('themeToggleBtn');
+
+    // 1. Check local storage
+    let currentTheme = localStorage.getItem('theme');
+
+    // 2. If nothing in storage, check system preference
+    if (!currentTheme) {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        currentTheme = 'light';
+      } else {
+        currentTheme = 'dark';
+      }
+    }
+
+    // 3. Apply the initial theme
+    if (currentTheme === 'light') {
+      document.body.classList.add('light-theme');
+    }
+
+    // 4. Handle click toggle
+    themeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-theme');
+
+      // Save user preference
+      if (document.body.classList.contains('light-theme')) {
+        localStorage.setItem('theme', 'light');
+      } else {
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  </script>
 </body>
 
 </html>
