@@ -79,17 +79,16 @@ body.light-theme .contact-input:focus {
   box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
 }
 
-body.light-theme #tsparticles {
-  opacity: 0.1;
+/* Invert white stars to dark grey and preserve cyan/purple accents */
+body.light-theme #bg-canvas {
+  filter: invert(1) hue-rotate(180deg);
+  opacity: 0.5;
 }
 
-/* Fade out pure black galaxy particles in light mode */
 body.light-theme .bg-grid {
-  opacity: 0.03;
-  border-color: #000;
+  opacity: 0.08;
+  border-color: var(--text-primary);
 }
-
-/* Lighter background grid */
 
 *,
 *::before,
