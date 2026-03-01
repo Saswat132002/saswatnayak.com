@@ -21,21 +21,75 @@
   --gradient-card: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(124, 58, 237, 0.05));
 }
 
-/* Light Theme Overrides */
+/* Premium Light Theme Overrides */
 body.light-theme {
-  --bg-primary: #ffffff;
-  --bg-secondary: #f4f5f8;
-  --bg-card: rgba(255, 255, 255, 0.8);
-  --text-primary: #0a0a1a;
-  --text-secondary: #565a7a;
-  --border: rgba(0, 212, 255, 0.25);
-  --glow-cyan: 0 0 15px rgba(0, 212, 255, 0.3), 0 0 30px rgba(0, 212, 255, 0.1);
-  --glow-purple: 0 0 15px rgba(124, 58, 237, 0.3), 0 0 30px rgba(124, 58, 237, 0.1);
-  --gradient-card: linear-gradient(135deg, rgba(0, 212, 255, 0.08), rgba(124, 58, 237, 0.08));
-  /* Added specific overrides for light theme readability */
+  --bg-primary: #f8f9fc;
+  --bg-secondary: #ffffff;
+  --bg-card: rgba(255, 255, 255, 0.95);
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --border: rgba(0, 0, 0, 0.08);
+  /* Replace glowing effects with elegant, tinted drop shadows for light mode */
+  --glow-cyan: 0 12px 24px -10px rgba(0, 212, 255, 0.3);
+  --glow-purple: 0 12px 24px -10px rgba(124, 58, 237, 0.3);
+  --gradient-card: linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(248, 250, 252, 1));
   --nav-bg: rgba(255, 255, 255, 0.85);
-  box-shadow: none;
 }
+
+/* Specific Light Theme Component Overrides for Premium Feel */
+body.light-theme .nav-links a {
+  color: var(--text-secondary);
+}
+
+body.light-theme .nav-links a:hover {
+  color: var(--cyan);
+}
+
+body.light-theme .btn-outline-3d {
+  color: var(--text-primary);
+  border-color: #cbd5e1;
+}
+
+body.light-theme .btn-outline-3d:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  background: transparent;
+}
+
+body.light-theme .timeline-item::before {
+  background: #e2e8f0;
+}
+
+/* lighter timeline line */
+body.light-theme .timeline-date {
+  color: var(--purple);
+  background: rgba(124, 58, 237, 0.08);
+  border-color: rgba(124, 58, 237, 0.2);
+}
+
+body.light-theme .contact-input {
+  background: #ffffff;
+  border-color: #e2e8f0;
+  color: var(--text-primary);
+}
+
+body.light-theme .contact-input:focus {
+  background: #ffffff;
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+}
+
+body.light-theme #tsparticles {
+  opacity: 0.1;
+}
+
+/* Fade out pure black galaxy particles in light mode */
+body.light-theme .bg-grid {
+  opacity: 0.03;
+  border-color: #000;
+}
+
+/* Lighter background grid */
 
 *,
 *::before,
