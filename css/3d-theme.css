@@ -81,13 +81,13 @@ body.light-theme .contact-input:focus {
 
 /* Invert white stars to dark grey and preserve cyan/purple accents */
 body.light-theme #bg-canvas {
-  filter: invert(1) hue-rotate(180deg);
-  opacity: 0.5;
+  filter: invert(1) hue-rotate(180deg) brightness(1.2);
+  opacity: 0.9 !important;
 }
 
 body.light-theme .bg-grid {
-  opacity: 0.08;
-  border-color: var(--text-primary);
+  opacity: 0.15 !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
 }
 
 *,
